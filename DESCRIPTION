@@ -1,0 +1,14 @@
+Package: rbeast
+Type: Package
+Title: R Boost Beast Examples
+Version: 0.1
+Date: 2020-06-23
+Author: Florian Rupprecht
+Maintainer: Florian Rupprecht <floruppr@gmail.com>
+Description: Example code for using Boost Beast with Rcpp and later.
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.4), later (>= 1.0.0)
+LinkingTo: Rcpp, BH, AsioHeaders, later
+RoxygenNote: 7.1.0
+Encoding: UTF-8
+SystemRequirements: C++11
