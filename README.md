@@ -1,6 +1,6 @@
-# R Beast Examples
+# R Boost Beast Example
 
-Example code for setting up Boost Beast with Rcpp and later.
+Example code for setting up R packages with Boost Beast, Rcpp and later.
 
 ## Boost headers missing from BH and AsioHeaders
 
