@@ -1,11 +1,11 @@
-#ifndef RBEAST_HTTP_SERVER_ASYNC_H
-#define RBEAST_HTTP_SERVER_ASYNC_H
+#ifndef RBEAST_WS_SERVER_ASYNC_H
+#define RBEAST_WS_SERVER_ASYNC_H
 
 #include <boost/beast/core.hpp>
 
 namespace rbeast
 {
-    namespace ht
+    namespace ws
     {
 
         namespace beast = boost::beast;   // from <boost/beast.hpp>
@@ -17,13 +17,11 @@ namespace rbeast
         {
             net::io_context &ioc_;
             tcp::acceptor acceptor_;
-            std::shared_ptr<std::string const> doc_root_;
 
         public:
             listener(
                 net::io_context &ioc,
-                tcp::endpoint endpoint,
-                std::shared_ptr<std::string const> const &doc_root);
+                tcp::endpoint endpoint);
 
             // Start accepting incoming connections
             void
@@ -36,7 +34,8 @@ namespace rbeast
             void
             on_accept(beast::error_code ec, tcp::socket socket);
         };
-    } // namespace ht
+    } // namespace ws
+
 } // namespace rbeast
 
 #endif

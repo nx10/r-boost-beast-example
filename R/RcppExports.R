@@ -2,12 +2,22 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #' @export
-beast_http_async <- function(host = "127.0.0.1", port = 1234L, threads = 4L) {
-    invisible(.Call(`_rbeast_beast_http_async`, host, port, threads))
+beast_http_server_async <- function(host = "127.0.0.1", port = 1234L, threads = 4L) {
+    invisible(.Call(`_rbeast_beast_http_server_async`, host, port, threads))
 }
 
 #' @export
-beast_http_async_stop <- function() {
-    invisible(.Call(`_rbeast_beast_http_async_stop`))
+beast_http_server_async_stop <- function() {
+    invisible(.Call(`_rbeast_beast_http_server_async_stop`))
+}
+
+#' @export
+beast_websocket_server_async <- function(host = "127.0.0.1", port = 1234L, threads = 4L) {
+    invisible(.Call(`_rbeast_beast_websocket_server_async`, host, port, threads))
+}
+
+#' @export
+beast_websocket_server_async_stop <- function() {
+    invisible(.Call(`_rbeast_beast_websocket_server_async_stop`))
 }
 
