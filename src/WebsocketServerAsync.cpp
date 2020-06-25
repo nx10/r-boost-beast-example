@@ -81,11 +81,11 @@ void beast_websocket_server_async(std::string host = "127.0.0.1", int port = 123
         rbeast::ws::ws_server = new rbeast::ws::WebsocketServerAsyncTask(host, port, threads);
         rbeast::ws::ws_server->begin();
 
-        Rcpp::Rcout << "Server started: http://" << host.c_str() << ":" << port << "/\n";
+        Rcpp::Rcout << "WS Server started: ws://" << host.c_str() << ":" << port << "/\n";
     }
     else
     {
-        Rcpp::Rcout << "Server already running, call beast_http_async_stop()";
+        Rcpp::Rcout << "WS Server already running, call beast_http_async_stop()";
     }
 }
 
